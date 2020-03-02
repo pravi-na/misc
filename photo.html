@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/slick.css">
+ <link rel="stylesheet" href="./assets/css/slick-theme.css">
+  <link rel="stylesheet" href="./assets/css/swiper.min.css">
+  <link rel="stylesheet" href="./assets/css/all.css">
+    </head>
+    <body>
+        
+<style>
+    .file {
+  visibility: hidden;
+  position: absolute;
+}
+.photo{
+    display: flex;
+    align-items: center;
+}
+#preview{
+    margin: 20px;
+}
+</style>
+<div class="photo">
+    <div >
+        <img src="https://placehold.it/80x80" id="preview" class="img-thumbnail">
+      </div>
+    <form method="post" id="image-form">
+      <input type="file" name="img[]" class="file" accept="image/*">
+        <div class="input-group-append">
+          <button type="button" class="browse"><i class="fas fa-pen"></i></button>
+      </div>
+    </form>
+  </div>
+ 
+  
+  
+
+        <script src="./assets/js/jquery.min.js"></script>
+        <script src="./assets/js/popper.min.js"></script>
+        <script src="./assets/js/bootstrap.min.js"></script>
+        <script src="./assets/js/slick.js"></script>
+        <script src="./assets/js/all.js"></script>
+        <script src="./assets/js/swiper.min.js"></script>
+        <script>
+            
+
+$(document).on("click", ".browse", function() {
+  var file = $(this).parents().find(".file");
+  file.trigger("click");
+});
+$('input[type="file"]').change(function(e) {
+  var fileName = e.target.files[0].name;
+  $("#file").val(fileName);
+
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    // get loaded data and render thumbnail.
+    document.getElementById("preview").src = e.target.result;
+  };
+  // read the image file as a data URL.
+  reader.readAsDataURL(this.files[0]);
+});
+
+
+        </script>
+    </body>
+</html>

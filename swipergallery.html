@@ -1,0 +1,126 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/fontawesome-free-5.12.1-web/css/all.css">
+  <link rel="stylesheet" href="./assets/css/slick.css">
+  <link rel="stylesheet" href="./assets/css/slick-theme.css">
+  <link rel="stylesheet" href="./assets/css//swiper.min.css">
+  <script src="./assets/js/jquery.min.js"></script>
+  <script src="./assets/js/popper.min.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+  <script src="./assets/fontawesome-free-5.12.1-web/js/all.js"></script>
+  <script src="./assets/js/slick.js"></script>
+  <script src="./assets/js/swiper.min.js"></script>
+</head>
+<body>
+    <style>
+        html, body {
+      position: relative;
+      height: 100%;
+    }
+    body {
+      background: #000;
+    
+      color:#000;
+      margin: 0;
+      padding: 0;
+    }
+    .swiper-container {
+      width: 100%;
+      height: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .swiper-slide {
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .gallery-top {
+      height: 80%;
+      width: 100%;
+    }
+    .gallery-thumbs {
+      height: 20%;
+      box-sizing: border-box;
+      padding: 10px 0;
+    }
+    .gallery-thumbs .swiper-slide {
+      width: 25%;
+      height: 100%;
+      opacity: 0.4;
+    }
+    .gallery-thumbs .swiper-slide-thumb-active {
+      opacity: 1;
+    }
+    </style>
+    <div class="product-image">
+        <div class="swiper-container gallery-top">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(./assets/images/task4_files/image.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./assets/images/task4_files/image2-1.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./assets/images/task4_files/image2-2.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./assets/images/task4_files/image2-3.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./assets/images/task4_files/image2-4.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./assets/images/task4_files/image2-5.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./assets/images/task4_files/image3-1.jpg.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./assets/images/task4_files/extra4.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./assets/images/task4_files/image3-3.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./assets/images/task4_files/image3-4.jpg)"></div>
+          </div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next swiper-button-white"></div>
+          <div class="swiper-button-prev swiper-button-white"></div>
+        </div>
+        <div class="swiper-container gallery-thumbs">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(./assets/images/task4_files/image.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./assets/images/task4_files/image2-1.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./assets/images/task4_files/image2-2.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./assets/images/task4_files/image2-3.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./assets/images/task4_files/image2-4.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./assets/images/task4_files/image2-5.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./assets/images/task4_files/image3-1.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./assets/images/task4_files/extra4.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./assets/images/task4_files/image3-3.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./assets/images/task4_files/image3-4.jpg)"></div>
+          </div>
+        </div>
+        <!-- <img src="./assets/images/task4_files/extra3.jpg" alt="img"></div> -->
+  </div>
+    <script>
+        var galleryThumbs = new Swiper('.gallery-thumbs', {
+          spaceBetween: 1,
+          slidesPerView: 10,
+          freeMode: true,
+          watchSlidesVisibility: true,
+          watchSlidesProgress: true,
+        });
+        
+        var galleryTop = new Swiper('.gallery-top', {
+          spaceBetween: 10,
+          zoom: {
+    maxRatio: 5,
+  },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          thumbs: {
+            swiper: galleryThumbs
+          }
+        });
+        var swiperSlide = document.getElementsByClassName('swiper-slide')
+for(var index = 0; index< swiperSlide.length; index++){
+swiperSlide[index].addEventListener('mouseover',function(e){
+    mySwiper.zoom.in();
+})
+
+swiperSlide[index].addEventListener('mouseout',function(e){
+    mySwiper.zoom.out();
+})
+}
+        
+      </script>
+</body>

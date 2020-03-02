@@ -1,0 +1,81 @@
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+      <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+      <link rel="stylesheet" href="./assets/fontawesome-free-5.12.1-web/css/all.css">
+      <link rel="stylesheet" href="./assets/css/slick.css">
+      <link rel="stylesheet" href="./assets/css/slick-theme.css">
+      <link rel="stylesheet" href="./assets/css//swiper.min.css">
+      <script src="./assets/js/jquery.min.js"></script>
+      <script src="./assets/js/popper.min.js"></script>
+      <script src="./assets/js/bootstrap.min.js"></script>
+      <script src="./assets/fontawesome-free-5.12.1-web/js/all.js"></script>
+      <script src="./assets/js/slick.js"></script>
+      <script src="./assets/js/swiper.min.js"></script>
+    </head>
+
+    <body>
+        <style>
+            #thumblist {
+              position: relative;
+              height: 100%;
+            }
+            #thumblist {
+              background: #eee;
+              font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+              font-size: 14px;
+              color:#000;
+              margin: 0;
+              padding: 0;
+            }
+            .swiper-container .zooming-img {
+              width: 100%;
+              height: 100%;
+            }
+            .zooming-img .swiper-slide {
+              text-align: center;
+              font-size: 18px;
+              background: #fff;
+        
+              /* Center slide text vertically */
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: -webkit-flex;
+              display: flex;
+              -webkit-box-pack: center;
+              -ms-flex-pack: center;
+              -webkit-justify-content: center;
+              justify-content: center;
+              -webkit-box-align: center;
+              -ms-flex-align: center;
+              -webkit-align-items: center;
+              align-items: center;
+            }
+          </style>
+<div class="swiper-container zooming-img">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><a class="zoomThumbActive" href='#' rel="{gallery: 'gal1', smallimage: './assets/images/task4_files/extra3.jpg',largeimage: './assets/images/task4_files/extra3.jpg'}" title="img1 jqzoom gallery"><img src='./assets/images/task4_files/extra3.jpg' alt="img1 jqzoom gallery" /></a></div>
+      <div class="swiper-slide"><a href='#' rel="{gallery: 'gal1', smallimage: './assets/images/task4_files/image2-1.jpg',largeimage: './assets/images/task4_files/image2-1.jpg'}" title="img2 jqzoom gallery"><img src='./assets/images/task4_files/image2-1.jpg' alt="img2 jqzoom gallery" /></a></div>
+      <div class="swiper-slide"><a  href='#' rel="{gallery: 'gal1', smallimage: './assets/images/task4_files/extra1.jpg',largeimage: './assets/images/task4_files/extra1.jpg'}" title="img3 jqzoom gallery"><img src='./assets/images/task4_files/extra1.jpg' alt="img3 jqzoom gallery" /></a></div>
+     
+    </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="../package/js/swiper.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.zooming-img', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>        
+    </body>
+</html>

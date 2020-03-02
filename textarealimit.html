@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Text-areaLimit</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/slick.css">
+  <link rel="stylesheet" href="./assets/css/slick-theme.css">
+  <link rel="stylesheet" href="./assets/css/swiper.min.css">
+  <link rel="stylesheet" href="./assets/css/all.css">
+</head>
+<body>
+    <form name="myform">
+        <textarea name="limitedtextarea" onKeyDown="limitText(this.form.limitedtextarea,this.form.countdown,100);" 
+        onKeyUp="limitText(this.form.limitedtextarea,this.form.countdown,100);">
+        </textarea><br>
+        <text size="1">(Maximum characters: 100)<br>
+        You have <input readonly type="text" name="countdown" size="3" value="100"> characters left.</text>
+        </form>
+
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/slick.js"></script>
+    <script src="./assets/js/all.js"></script>
+    <script src="./assets/js/swiper.min.js"></script>
+
+    <script language="javascript" type="text/javascript">
+        function limitText(limitField, limitCount, limitNum) {
+            if (limitField.value.length > limitNum) {
+                limitField.value = limitField.value.substring(0, limitNum);
+            } else {
+                limitCount.value = limitNum - limitField.value.length;
+            }
+        }
+        </script>
+</body>
+</html>

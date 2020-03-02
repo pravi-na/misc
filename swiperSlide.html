@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/fontawesome-free-5.12.1-web/css/all.css">
+  <link rel="stylesheet" href="./assets/css/slick.css">
+  <link rel="stylesheet" href="./assets/css/slick-theme.css">
+  <link rel="stylesheet" href="./assets/css//swiper.min.css">
+  <script src="./assets/js/jquery.min.js"></script>
+  <script src="./assets/js/popper.min.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+  <script src="./assets/fontawesome-free-5.12.1-web/js/all.js"></script>
+  <script src="./assets/js/slick.js"></script>
+  <script src="./assets/js/swiper.min.js"></script>
+</head>
+<body>
+  <style>
+    .header-swiper {
+      position: relative;
+      height: auto;
+    }
+    .header-swiper {
+      background: #eee;
+      /* font-family: Helvetica Neue, Helvetica, Arial, sans-serif; */
+      /* font-size: 14px; */
+      color:#000;
+      margin: 0;
+      padding: 0;
+    }
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      width: 80%;
+
+      /* Center slide text vertically */
+      /* display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center; */
+    }
+    /* .swiper-slide:nth-child(2n) {
+      width: 60%;
+    }
+    .swiper-slide:nth-child(3n) {
+      width: 40%;
+    } */
+  </style>
+
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">Women's Fashion</div>
+    <div class="swiper-slide">Home appliances </div>
+    <div class="swiper-slide">Beauty</div>
+    <div class="swiper-slide">Personal care</div>
+    <div class="swiper-slide">Electronics </div>
+    <div class="swiper-slide">Home</div>
+    <div class="swiper-slide">Furnitures</div>
+    <div class="swiper-slide">Accesories</div>
+    <div class="swiper-slide">E-Readers</div>
+    <div class="swiper-slide">E-books</div>
+    <div class="swiper-slide">Mobiles</div>
+    
+  </div>
+  <!-- Add Pagination -->
+  <!-- <div class="swiper-pagination"></div> -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: '5',
+    spaceBetween: 5,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+  });
+</script>
+</body>
+</html>
